@@ -1,0 +1,10 @@
+body{
+
+    background-image: 
+    linear-gradient(to top, rgba(245, 246, 252, 0), rgb(0, 0, 0)),
+    url("1.jpg");
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    
+
+}

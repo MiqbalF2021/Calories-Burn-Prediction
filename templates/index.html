@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+    <title>Calories Prediction App</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href= "../static/style.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+      <!-- End Tailwind -->
+<body>
+
+    <div class="Box" >
+        
+    </div>
+
+    <div class="min-h-screen w-full h-14 to-blue-500 flex flex-col justify-center items-center" >
+        <div class="text-3xl font-extrabold ...">
+            <span class=" text-white">
+              Colories Burn <span class="text-red-600 font">Prediction</span>
+            </span>
+          </div>
+
+
+          <!-- Input  -->
+        <form action="{{url_for('predict')}}" ,method="POST" class="backdrop-blur-sm bg-white/30 shadow-md background-size: py-5 px-10 mt-3 rounded-xl">
+
+            <p class="font-bold text-gray-900"> Gender </p>
+            
+            <select class="w-72 font-bold text-gray-700 rounded-md ackdrop-blur-sm bg-white/30 focus:bg-white/60 focus:outline-none focus:font-bold focus:text-gray-700"" name="gender">
+
+                <option  value="" disabled selected hidden></option>
+                <option class="text-gray-700 font-bold bg-gray-400" value="Male">Male</option>
+                <option class="text-gray-700 font-bold bg-gray-400" value="Female">Female</option>
+
+              </select>
+            
+            <p class="font-bold text-gray-900 shadow-md"> Age </p>
+            <input type="text" name="age" placeholder="" class="font-bold text-gray-700 w-72 rounded-md ackdrop-blur-sm bg-white/30  focus:bg-white/60 focus:outline-none focus:font-bold focus:text-gray-700">
+            <p class="font-bold text-gray-900"> Duration </p>
+            <input type="text" name="duration" placeholder="" class="font-bold text-gray-700 w-72 rounded-md ackdrop-blur-sm bg-white/30 focus:bg-white/60 focus:outline-none focus:font-bold focus:text-gray-700"" />
+            <p class="font-bold text-gray-900"> Heart Rate </p>
+            <input type="text" name="heart_rate"  placeholder="" class="font-bold text-gray-700 w-72 rounded-md ackdrop-blur-sm bg-white/30 focus:bg-white/60 focus:outline-none focus:font-bold focus:text-gray-700"">
+            <p class="font-bold text-gray-900"> Temperature </p>
+            <input type="text" name="temp"  placeholder="" class="font-bold text-gray-700 w-72 rounded-md ackdrop-blur-sm bg-white/30 focus:bg-white/60 focus:outline-none focus:font-bold focus:text-gray-700"">
+            <p class="font-bold text-gray-900"> Height </p>
+            <input type="text" name="height"  placeholder="" class="font-bold text-gray-700 w-72 rounded-md ackdrop-blur-sm bg-white/30 focus:bg-white/60 focus:outline-none focus:font-bold focus:text-gray-700"">
+            <p class="font-bold text-gray-900"> Weight </p>
+            <input type="text" name="weight"  placeholder="" class="font-bold text-gray-700 w-72 rounded-md ackdrop-blur-sm bg-white/30 focus:bg-white/60 focus:outline-none focus:font-bold focus:text-gray-700"">
+
+            <div class="flex justify-center gap-5 mt-5 font-bold text-gray-200">
+                <input name=""  type="submit"  value="Predict" class="bg-gray-900 px-5 py-2 rounded-md hover:bg-gray-200 hover:text-gray-900">
+                <input name="" type="reset" onclick="myFunction()" value="Clear" class="bg-red-600 px-5 py-2 rounded-md hover:bg-red-100 hover:text-gray-900">
+            </div>
+            
+    
+            <script src="../static/script.js">
+
+            </script>
+    
+    
+        </form>
+
+
+    </div>
+
+
+</body>
+
+</head>
+
+
+
+
+</html>
